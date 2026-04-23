@@ -27,10 +27,12 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
                 <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
+                <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
+            <Rectangle Fill="#FF2E2E2E" Grid.Column="0"/>
+            <Rectangle Fill="#FF2E2E2E" Grid.Column="2"/>
         </Grid>
 
         <Rectangle Fill="#FF262626" Grid.Row="0"/>
