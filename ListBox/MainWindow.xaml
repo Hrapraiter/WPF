@@ -20,13 +20,13 @@
                  Margin="5"
                  HorizontalContentAlignment="Center" 
                  VerticalContentAlignment="Center"
-                 KeyDown="KeyDown"
+                 KeyDown="DlgProc"
                  />
         
         <ListBox Name="listBox" 
                  Grid.Row="1" Grid.ColumnSpan="2"
                  Margin="5"
-                 KeyDown="KeyDown"
+                 KeyDown="DlgProc"
                  />
 
         <Grid Grid.Row="0" Grid.Column="1">
@@ -35,9 +35,9 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Button Name="btnADD" Content="ADD" Grid.Column="0" Margin="5" Click="button_Click" />
-            <Button Name="btnDEL" Content="DEL" Grid.Column="1" Margin="5" Click="button_Click" />
-            <Button Name="btnCLR" Content="CLR" Grid.Column="2" Margin="5" Click="button_Click" />
+            <Button Name="btnADD" Content="ADD" Grid.Column="0" Margin="5" Click="DlgProc" />
+            <Button Name="btnDEL" Content="DEL" Grid.Column="1" Margin="5" Click="DlgProc" />
+            <Button Name="btnCLR" Content="CLR" Grid.Column="2" Margin="5" Click="DlgProc" />
         </Grid>
 
     </Grid>
