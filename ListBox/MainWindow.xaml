@@ -20,12 +20,13 @@
                  Margin="5"
                  HorizontalContentAlignment="Center" 
                  VerticalContentAlignment="Center"
-                 KeyDown="tbInput_KeyDown"
+                 KeyDown="KeyDown"
                  />
         
         <ListBox Name="listBox" 
                  Grid.Row="1" Grid.ColumnSpan="2"
                  Margin="5"
+                 KeyDown="KeyDown"
                  />
 
         <Grid Grid.Row="0" Grid.Column="1">

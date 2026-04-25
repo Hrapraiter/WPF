@@ -26,7 +26,7 @@ namespace ListBox
         }
         void button_Click(object sender, EventArgs e) 
         {
-            tbInput.Focus();
+            
 
             switch ((sender as Button).Content) 
             {
@@ -36,9 +36,10 @@ namespace ListBox
                         if (tbInput.Text.Trim() == "") break;
                         listBox.Items.Add(tbInput.Text);
                         tbInput.Text = null;
+                        tbInput.Focus();
                     }
                     break;
-                case "CLR": listBox.Items.Clear();break;
+                case "CLR": listBox.Items.Clear(); break;
                 case "DEL":
                     if (listBox.SelectedIndex >= 0)
                     listBox.Items.RemoveAt(listBox.SelectedIndex);
@@ -46,9 +47,12 @@ namespace ListBox
             }
         }
 
-        private void tbInput_KeyDown(object sender, KeyEventArgs e)
+        private void KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter) button_Click(btnADD , null);
+            
+            if(sender is TextBox && e.Key == Key.Enter)  button_Click(btnADD, null);
+            if(sender is System.Windows.Controls.ListBox && e.Key == Key.Delete) button_Click(btnDEL, null);
+            
         }
     }
 }
