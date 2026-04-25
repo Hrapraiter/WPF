@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Binding"
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="300" ResizeMode="CanMinimize" FontSize="16">
-    <Grid>
+    <Grid Background="#FF1A1A1A">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -16,16 +16,19 @@
                         Width="250" Height="32"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Text="{Binding BoundText,UpdateSourceTrigger=PropertyChanged , Mode=OneWayToSource}"
+                        Text="{Binding BoundText,UpdateSourceTrigger=PropertyChanged , Mode=OneWayToSource}" 
+                        Background="#FF2E2E2E" 
+                        Foreground="#FFF0EFF1"
                         />
         <Button         Grid.Row="1" Name="btnDefault" 
                         Content="Default"
                         Width="250" Height="32" 
-                        Click="btnDefault_Click"
+                        Click="btnDefault_Click" Background="#FF9184EE"
                         />
         <TextBlock      Grid.Row="2" Name="tbResult" 
                         HorizontalAlignment="Center" VerticalAlignment="Center"
                         Text="{Binding BoundText}"
+                        Foreground="#FFF0EFF1"
                         />
     </Grid>
 </Window>
