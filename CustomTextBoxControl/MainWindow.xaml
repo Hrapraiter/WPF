@@ -7,7 +7,7 @@
         xmlns:UserControls="clr-namespace:CustomTextBoxControl.View.UserControls"
         mc:Ignorable="d"
         Title="Clearable TextBox" Height="400" Width="300" ResizeMode="CanMinimize">
-    <Grid>
+    <Grid Name="grid">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
@@ -16,12 +16,12 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <UserControls:ClearableTextBox Grid.Row="0" Width="250" Height="40" Placeholder="Фамилия"       />
-        <UserControls:ClearableTextBox Grid.Row="1" Width="250" Height="40" Placeholder="Имя"           />
-        <UserControls:ClearableTextBox Grid.Row="2" Width="250" Height="40" Placeholder="Отчество"      />
-        <UserControls:ClearableTextBox Grid.Row="3" Width="250" Height="40" Placeholder="Дата рождения" />
-        <UserControls:ClearableTextBox Grid.Row="4" Width="250" Height="40" Placeholder="E-mail"        />
-        <UserControls:ClearableTextBox Grid.Row="5" Width="250" Height="40" Placeholder="Телефон"       />
+        <UserControls:ClearableTextBox TabIndex="1" Grid.Row="0" Width="250" Height="40" Placeholder="Фамилия"       KeyDown="PressKey"/>
+        <UserControls:ClearableTextBox TabIndex="2" Grid.Row="1" Width="250" Height="40" Placeholder="Имя"           KeyDown="PressKey"/>
+        <UserControls:ClearableTextBox TabIndex="3" Grid.Row="2" Width="250" Height="40" Placeholder="Отчество"      KeyDown="PressKey"/>
+        <UserControls:ClearableTextBox TabIndex="4" Grid.Row="3" Width="250" Height="40" Placeholder="Дата рождения" KeyDown="PressKey"/>
+        <UserControls:ClearableTextBox TabIndex="5" Grid.Row="4" Width="250" Height="40" Placeholder="E-mail"        KeyDown="PressKey"/>
+        <UserControls:ClearableTextBox TabIndex="6" Grid.Row="5" Width="250" Height="40" Placeholder="Телефон"       KeyDown="PressKey"/>
         
     </Grid>
 </Window>
